@@ -123,6 +123,11 @@ lc_ip_apple=$lc_ip_p1.$lc_ip_p2.$lc_ip_p3.$lc_incr_apple
 lc_incr_glyph=$((lc_ip_p4+14))
 lc_ip_glyph=$lc_ip_p1.$lc_ip_p2.$lc_ip_p3.$lc_incr_glyph
 
+lc_incr_zenimax=$((lc_ip_p4+15))
+lc_ip_zenimax=$lc_ip_p1.$lc_ip_p2.$lc_ip_p3.$lc_incr_glyph
+
+lc_incr_digitalextremes=$((lc_ip_p4+16))
+lc_ip_digitalextremes=$lc_ip_p1.$lc_ip_p2.$lc_ip_p3.$lc_incr_glyph
 
 ## Put IP's in the log file
 echo [ lc_date ] Information !!! >>$lc_base_folder/logs/$lc_ip_logfile
@@ -145,6 +150,8 @@ echo Sony: $lc_ip_sony >>$lc_base_folder/logs/$lc_ip_logfile
 echo Tera: $lc_ip_tera >>$lc_base_folder/logs/$lc_ip_logfile
 echo Uplay: $lc_ip_uplay >>$lc_base_folder/logs/$lc_ip_logfile
 echo Wargaming: $lc_ip_wargaming >>$lc_base_folder/logs/$lc_ip_logfile
+echo Zenimax: $lc_ip_zenimax >>$lc_base_folder/logs/$lc_ip_logfile
+echo Digitalextremes: $lc_ip_digitalextremes >>$lc_base_folder/logs/$lc_ip_logfile
 
 ## Check if the Lancache user exists if not creating the user
 if id -u "lancache" >/dev/null 2>&1; then
@@ -173,6 +180,8 @@ sudo mkdir -p $lc_srv_loc/data/tera/
 sudo mkdir -p $lc_srv_loc/data/arenanetworks/
 sudo mkdir -p $lc_srv_loc/data/gog/
 sudo mkdir -p $lc_srv_loc/data/uplay
+sudo mkdir -p $lc_srv_loc/data/zenimax
+sudo mkdir -p $lc_srv_loc/data/digitalextremes
 sudo mkdir -p $lc_srv_loc/logs/
 sudo mkdir -p $lc_srv_loc/logs/Errors
 sudo mkdir -p $lc_srv_loc/logs/Keys
